@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: PostgreSQL repo installed
+      dnf:
+        name: https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-24-x86_64/pgdg-fedora95-9.5-3.noarch.rpm
+        state: present
+      become: yes
+    - name: PostgreSQL Database Server 9.5 installed
+      dnf:
+        name: "@PostgreSQL Database Server 9.5 PGDG"
+        state: present
+      become: yes
+    - name: cluster initialized
+      command: /usr/pgsql-9.5/bin/postgresql95-setup initdb
+      args:
+        creates: /var/lib/pgsql/9.5/data/pg_hba.conf
+      environment:
+        PGSETUP_INITDB_OPTIONS: -E UTF8 --auth-local peer --auth-host md5
+      become: yes
+
