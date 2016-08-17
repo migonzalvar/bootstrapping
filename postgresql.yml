@@ -9,8 +9,11 @@
       become: yes
     - name: PostgreSQL Database Server 9.5 installed
       dnf:
-        name: "@PostgreSQL Database Server 9.5 PGDG"
+        name: '{{ item }}'
         state: present
+      with_items:
+        - "@PostgreSQL Database Server 9.5 PGDG"
+        - postgresql95-devel
       become: yes
     - name: cluster initialized
       command: /usr/pgsql-9.5/bin/postgresql95-setup initdb
@@ -19,4 +22,5 @@
       environment:
         PGSETUP_INITDB_OPTIONS: -E UTF8 --auth-local peer --auth-host md5
       become: yes
+# TODO: createuser -dsR migonzalvar
 
