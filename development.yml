@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: development tools installed
+      dnf:
+        name: '{{ item }}'
+        state: present
+      become: yes
+      with_items:
+        - "@Development tools"
+        - python3-devel
+        - redhat-rpm-config
