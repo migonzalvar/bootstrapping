@@ -23,3 +23,8 @@
         - the_silver_searcher
         - dropbox
         - nautilus-dropbox
+        - hg
+        - tmux
+        - vim
+        - ansible
+        - python2-dnf
