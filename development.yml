@@ -28,3 +28,6 @@
         - vim
         - ansible
         - python2-dnf
+        - kernel-devel
+        - kmod-VirtualBox
+        - vagrant
