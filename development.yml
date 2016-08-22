@@ -21,6 +21,7 @@
         - redhat-rpm-config
         - jq
         - the_silver_searcher
+        - parcellite
         - dropbox
         - nautilus-dropbox
         - hg
