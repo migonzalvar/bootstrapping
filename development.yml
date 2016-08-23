@@ -47,3 +47,5 @@
         - pcre-devel
         - libffi-devel
         - openssl-devel
+        - mariadb
+        - mariadb-server
