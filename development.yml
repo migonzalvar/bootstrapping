@@ -17,6 +17,7 @@
       become: yes
       with_items:
         - "@Development tools"
+        - python-devel
         - python3-devel
         - redhat-rpm-config
         - jq
@@ -44,3 +45,5 @@
         - libpcap-devel
         - xz-devel
         - pcre-devel
+        - libffi-devel
+        - openssl-devel
