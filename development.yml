@@ -50,3 +50,6 @@
         - mariadb
         - mariadb-devel
         - mariadb-server
+        - php
+        - php-pear
+        - php-pgsql
