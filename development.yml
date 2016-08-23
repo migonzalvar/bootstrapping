@@ -48,4 +48,5 @@
         - libffi-devel
         - openssl-devel
         - mariadb
+        - mariadb-devel
         - mariadb-server
