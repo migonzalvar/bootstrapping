@@ -53,3 +53,4 @@
         - php
         - php-pear
         - php-pgsql
+        - pandoc
