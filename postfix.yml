@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: postfix installed
+      dnf:
+        name: '{{ item }}'
+        state: present
+      with_items:
+        - postfix
+        - libselinux-python
+    - name: add aliases
+      lineinfile:
+        dest: /etc/aliases
+        regexp: '^root:'
+        line: "root:\t\tmigonzalvar"
+      register: add_alias
+    - name: updated aliases database
+      command: /usr/bin/newaliases
+      when: add_alias|changed
