@@ -54,3 +54,4 @@
         - php-pear
         - php-pgsql
         - pandoc
+        - htop
