@@ -1,0 +1,2 @@
+---
+mail_password: '{{ vaulted_mail_password }}'

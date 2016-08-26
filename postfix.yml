@@ -2,6 +2,9 @@
 - hosts: localhost
   connection: local
   become: yes
+  vars_files:
+    - vault.yml
+    - vars.yml
   tasks:
     - name: postfix installed
       dnf:
@@ -19,3 +22,42 @@
     - name: updated aliases database
       command: /usr/bin/newaliases
       when: add_alias|changed
+    - name: configured generic
+      lineinfile:
+        dest: /etc/postfix/generic
+        line: '{{ item }}'
+      with_items:
+        - "migonzalvar\t\tmgonzalez@initios.com"
+      register: configured_generic
+    - name: updated generic database
+      command: /usr/sbin/postmap /etc/postfix/generic
+      when: configured_generic|changed
+    - name: configured sasl_passwd
+      lineinfile:
+        dest: /etc/postfix/sasl_passwd
+        line: '{{ item }}'
+      with_items:
+        - '[dns73112.phdns12.es]:587 mgonzalez@initios.com:{{ mail_password }}'
+      register: configured_sasl_passwd
+    - name: updated sasl_passwd database
+      command: /usr/sbin/postmap /etc/postfix/generic
+      when: configured_sasl_passwd|changed
+    - name: configured main.cf
+      lineinfile:
+        dest: /etc/postfix/main.cf
+        line: '{{ item }}'
+      with_items:
+        - relayhost = [dns73112.phdns12.es]:587
+        - smtp_use_tls = yes
+        - smtp_sasl_auth_enable = yes
+        - smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+        - smtp_tls_CAfile = /etc/ssl/certs/ca-bundle.crt
+        - smtp_sasl_security_options = noanonymous
+        - smtp_sasl_tls_security_options = noanonymous
+        - smtp_generic_maps = hash:/etc/postfix/generic
+      register: configured_main_cf
+    - name: reloaded postfix
+      service:
+        name: postfix
+        state: reloaded
+      when: configured_main_cf|changed
