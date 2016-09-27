@@ -1,3 +1,6 @@
+=============
+Bootstrapping
+=============
 
 Manualmente:
 
@@ -22,5 +25,7 @@ Falta por incluir:
 
     sudo dnf install zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    
+
     python3 -m pip install --user checkoutmanager
+
+    curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -

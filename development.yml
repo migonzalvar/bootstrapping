@@ -10,6 +10,11 @@
       with_items:
         - 'http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm'
         - 'http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm'
+    - name: nodejs repo installed
+      dnf:
+        name: 'https://rpm.nodesource.com/pub_6.x/fc/24/x86_64/nodesource-release-fc{{ ansible_distribution_major_version }}-1.noarch.rpm'
+        state: present
+      become: yes
     - name: development tools installed
       dnf:
         name: '{{ item }}'
