@@ -61,3 +61,15 @@
         - pandoc
         - htop
         - remmina
+        - aspell
+        - aspell-en
+        - aspell-es
+        # pillow
+        - libtiff-devel
+        - libjpeg-devel
+        - zlib-devel
+        - freetype-devel
+        - lcms2-devel
+        - libwebp-devel
+        - tcl-devel
+        - tk-devel
