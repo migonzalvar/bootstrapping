@@ -29,3 +29,13 @@ Falta por incluir:
     python3 -m pip install --user checkoutmanager
 
     curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+
+
+IntelliJ
+========
+
+Para resolver el problema de cierre de *pop ups* en modo **sloppy focus**:
+
+  1. In IntelliJ open settings Registry (Ctrl+Shift+A and look for "Registry...")
+  2. Find "allow.dialog.based.popups" and disable it
+
