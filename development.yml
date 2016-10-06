@@ -74,3 +74,6 @@
         - libwebp-devel
         - tcl-devel
         - tk-devel
+        - xorg-x11-server-Xvfb
+        - exfat-utils
+        - fuse-exfat
