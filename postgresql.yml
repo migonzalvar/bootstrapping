@@ -23,4 +23,7 @@
         PGSETUP_INITDB_OPTIONS: -E UTF8 --auth-local peer --auth-host md5
       become: yes
 # TODO: createuser -dsR migonzalvar
-
+#
+# ALTER ROLE migonzalvar SET client_encoding TO 'utf8';
+# ALTER ROLE migonzalvar SET default_transaction_isolation TO 'read committed';
+# ALTER ROLE migonzalvar SET timezone TO 'UTC';
