@@ -77,3 +77,4 @@
         - xorg-x11-server-Xvfb
         - exfat-utils
         - fuse-exfat
+        - zeal
