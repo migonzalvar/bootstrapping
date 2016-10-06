@@ -24,6 +24,7 @@
         - "@Development tools"
         - python-devel
         - python3-devel
+        - ruby
         - redhat-rpm-config
         - jq
         - the_silver_searcher
