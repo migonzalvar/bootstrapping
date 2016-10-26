@@ -79,3 +79,4 @@
         - fuse-exfat
         - zeal
         - liboping
+        - translate-toolkit
