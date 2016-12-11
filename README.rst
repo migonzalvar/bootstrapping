@@ -31,6 +31,20 @@ Falta por incluir:
     curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
 
 
+Funciones
+=========
+
+.. code::
+
+    function killport() {
+        lsof -i tcp:"$@" | awk 'NR!=1 {print $2}' | xargs kill ;
+    }
+
+    function whiteboard () {
+        convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2
+    }
+
+
 IntelliJ
 ========
 
