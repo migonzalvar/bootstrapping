@@ -30,6 +30,8 @@ Falta por incluir:
 
     curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
 
+    gem install --user-install sass
+
 
 Funciones
 =========
