@@ -22,6 +22,7 @@
       become: yes
       with_items:
         - "@Development tools"
+        - gcc-c++
         - python-devel
         - python3-devel
         - ruby
