@@ -66,6 +66,9 @@
         - aspell
         - aspell-en
         - aspell-es
+        # lxml
+        - libxml2-devel
+        - libxslt-devel
         # pillow
         - libtiff-devel
         - libjpeg-devel
