@@ -85,3 +85,6 @@
         - liboping
         - translate-toolkit
         - byzanz
+        # shell tools
+        - stow
+        - direnv
