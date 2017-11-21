@@ -33,6 +33,14 @@ Falta por incluir:
     gem install --user-install sass
 
 
+Fuentes
+=======
+
+Para IDE: `Fira Code <https://github.com/tonsky/FiraCode>`_
+
+Para terminal: `Inconsolata <http://www.levien.com/type/myfonts/inconsolata.html>`_
+
+
 Funciones
 =========
 
