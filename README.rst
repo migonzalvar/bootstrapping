@@ -33,6 +33,9 @@ Falta por incluir:
     gem install --user-install sass
 
 
+    sudo dnf copr enable carlwgeorge/ripgrep
+    sudo dnf install ripgrep
+
 Fuentes
 =======
 
@@ -63,3 +66,8 @@ Para resolver el problema de cierre de *pop ups* en modo **sloppy focus**:
   1. In IntelliJ open settings Registry (Ctrl+Shift+A and look for "Registry...")
   2. Find "allow.dialog.based.popups" and disable it
 
+
+Otro software externo
+=====================
+
+- Fortinetclient
