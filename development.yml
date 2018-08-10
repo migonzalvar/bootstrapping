@@ -88,3 +88,4 @@
         # shell tools
         - stow
         - direnv
+        - fd-find
