@@ -85,6 +85,9 @@
         - liboping
         - translate-toolkit
         - byzanz
+        # Fonts
+        - adobe-source-code-pro-fonts
+          # see also fira code for ligature support
         # shell tools
         - stow
         - direnv
