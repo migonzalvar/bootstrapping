@@ -36,6 +36,11 @@ Falta por incluir:
     sudo dnf copr enable carlwgeorge/ripgrep
     sudo dnf install ripgrep
 
+Gestión de multiples versiones
+==============================
+
+Usar pyenv, nodenv y phpenv.
+
 Fuentes
 =======
 

@@ -69,6 +69,23 @@
         # lxml
         - libxml2-devel
         - libxslt-devel
+        # php
+        - autoconf
+        - libtool
+        - re2c
+        - bison
+        - libxml2-devel
+        - bzip2-devel
+        - libcurl-devel
+        - libpng-devel
+        - libicu-devel
+        - gcc-c++
+        - libmcrypt-devel
+        - libwebp-devel
+        - libjpeg-devel
+        - openssl-devel
+        - libtidy-devel
+        - libzip-devel
         # pillow
         - libtiff-devel
         - libjpeg-devel
