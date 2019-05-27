@@ -109,3 +109,4 @@
         - stow
         - direnv
         - fd-find
+        - ripgrep
