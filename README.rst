@@ -71,6 +71,10 @@ Para resolver el problema de cierre de *pop ups* en modo **sloppy focus**:
   1. In IntelliJ open settings Registry (Ctrl+Shift+A and look for "Registry...")
   2. Find "allow.dialog.based.popups" and disable it
 
+Gestión de memoria
+==================
+
+- earlyoom
 
 Otro software externo
 =====================
